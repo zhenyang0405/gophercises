@@ -43,10 +43,29 @@ func CreateTask(task string) (int, error) {
 	return id, nil
 }
 
+func ViewAllTasks() ([]Task, error) {
+	var tasks []Task
+	err := db.View(func(tx *bolt.Tx) error{
+		b := tx.Bucket(taskBucket)
+		c := b.Cursor()
+		for k, v := c.First(); k != nil; k, v = c.Next() {
+			tasks = append(tasks, Task{
+				Key: btoi(k),
+				Value: string(v),
+			})
+		}
+		return nil
+	})
+	if err != nil {
+		return nil, err
+	}
+	return tasks, nil
+}
+
 func itob(i int) []byte {
-	byte := make([]byte, 8)
-	binary.BigEndian.PutUint64(byte, uint64(i))
-	return byte
+	b := make([]byte, 8)
+	binary.BigEndian.PutUint64(b, uint64(i))
+	return b
 }
 
 func btoi(b []byte) int {
