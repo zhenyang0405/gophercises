@@ -7,7 +7,7 @@ import (
 	"github.com/boltdb/bolt"
 )
 
-var taskBucket = []byte("cli-task-manager")
+var taskBucket = []byte("tasks")
 var db *bolt.DB
 
 type Task struct {
