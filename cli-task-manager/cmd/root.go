@@ -4,5 +4,5 @@ import "github.com/spf13/cobra"
 
 var RootCmd = &cobra.Command{
 	Use: "task",
-	Short: "Task is a command line task manager.",
+	Short: "Task is a command line task manager",
 }
