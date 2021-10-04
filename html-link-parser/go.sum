@@ -1,3 +1,5 @@
+github.com/zhenyang0405/html-link-parser v0.0.0-20211001045122-3d81297a6a29 h1:1aEJbOR3q+ujN122S7ZZvVgWqVeFZUzi5fDvn/XBglE=
+github.com/zhenyang0405/html-link-parser v0.0.0-20211001045122-3d81297a6a29/go.mod h1:6NkkLS/0oG8wKYrbAalEIl9rpwE/BUQmCtHR2vloQxw=
 golang.org/x/net v0.0.0-20210929193557-e81a3d93ecf6 h1:Z04ewVs7JhXaYkmDhBERPi41gnltfQpMWDnTnQbaCqk=
 golang.org/x/net v0.0.0-20210929193557-e81a3d93ecf6/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
