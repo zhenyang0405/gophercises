@@ -17,7 +17,7 @@ type Task struct {
 
 func Init(dbPath string) error {
 	var err error
-	db, err := bolt.Open(dbPath, 0600, &bolt.Options{Timeout: 1 * time.Second})
+	db, err = bolt.Open(dbPath, 0600, &bolt.Options{Timeout: 1 * time.Second})
 	// defer db.Close()
 	if err != nil {
 		panic(err)
@@ -38,7 +38,7 @@ func CreateTask(task string) (int, error) {
 		return b.Put(key, []byte(task))
 	})
 	if err != nil {
-		panic(err)
+		return -1, err
 	}
 	return id, nil
 }
